@@ -7,18 +7,19 @@ module.exports = (api, options, rootOptions) => {
             "type": "git",
             "url": "git+https://github.com/qianfan123/fant-cli"
         },
-        dependencies: {
+        "dependencies": {
             "axios": "^0.19.2",
             "core-js": "^3.6.5",
             "fant2": "0.0.15",
             "vue": "^2.6.11",
-            "vue-class-component": "^7.2.3",
+            "vue-class-component": "^7.2.5",
+            "vue-kindeditor": "^0.4.5",
             "vue-property-decorator": "^8.5.1",
             "vue-router": "^3.3.4",
-            "vuex": "^3.4.0",
+            "vuex": "^3.5.1",
             "vuex-class": "^0.3.2"
         },
-        devDependencies: {
+        "devDependencies": {
             "@typescript-eslint/eslint-plugin": "^2.33.0",
             "@typescript-eslint/parser": "^2.33.0",
             "@vue/cli-plugin-babel": "^4.4.4",
@@ -36,7 +37,7 @@ module.exports = (api, options, rootOptions) => {
             "mockjs": "^1.1.0",
             "node-sass": "^4.12.0",
             "sass-loader": "^8.0.2",
-            "typescript": "^3.9.5",
+            "typescript": "^3.9.7",
             "vue-template-compiler": "^2.6.11"
         },
         "scripts": {

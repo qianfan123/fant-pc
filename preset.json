@@ -1,0 +1,29 @@
+{
+  "useTaobaoRegistry": true,
+  "packageManager": "npm",
+  "useConfigFiles": true,
+  "router": false,
+  "vuex": false,
+  "presets": {
+    "vue-typescript": {
+      "useConfigFiles": true,
+      "plugins": {
+        "@vue/cli-plugin-babel": {},
+        "@vue/cli-plugin-typescript": {
+          "classComponent": true,
+          "tsLint": true,
+          "esLint": false,
+          "lintOn": [
+            "save"
+          ],
+          "useTsWithBabel": true
+        },
+        "@vue/cli-plugin-pwa": {},
+        "@vue/cli-plugin-router": {
+          "historyMode": false
+        }
+      },
+      "cssPreprocessor": "node-sass"
+    }
+  }
+}

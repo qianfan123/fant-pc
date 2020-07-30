@@ -1,0 +1,25 @@
+{
+  "name": "fant-pc",
+  "version": "0.1.0",
+  "description": "基于fant组件库的模板项目",
+  "main": "prompts.js",
+  "scripts": {
+    "release": "standard-version"
+  },
+  "keywords": [
+    "vue",
+    "preset",
+    "ms"
+  ],
+  "author": "hd",
+  "license": "ISC",
+  "devDependencies": {
+    "cz-conventional-changelog": "2.1.0",
+    "standard-version": "^5.0.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

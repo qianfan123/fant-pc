@@ -3,6 +3,6 @@ NODE_ENV = production
 # just a flag
 ENV = 'uat'
 # base api
-VUE_APP_BASEURL = 'https://baas-uat.aiyingshi.net.cn'
-VUE_APP_TENANT = 'wsankuwy'
+VUE_APP_BASEURL = 'https://www.baidu.com'
+VUE_APP_TENANT = '6666'
 

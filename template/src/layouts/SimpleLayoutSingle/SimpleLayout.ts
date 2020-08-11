@@ -1,6 +1,4 @@
-import { Component, Vue } from 'vue-property-decorator'
+import { Component, Vue } from 'vue-property-decorator';
 
-@Component({
-})
-export default class SimpleLayout extends Vue {
-}
+@Component({})
+export default class SimpleLayout extends Vue {}

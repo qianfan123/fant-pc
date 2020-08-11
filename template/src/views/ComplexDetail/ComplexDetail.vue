@@ -9,7 +9,9 @@
         <!-- 页眉标题 结束 -->
         <!-- 页眉按钮组（按钮为一个时，可以不用div包裹） 开始 -->
         <div>
-          <el-button type="primary" size="medium" @click="doAudit">审核</el-button>
+          <el-button type="primary" size="medium" @click="doAudit"
+            >审核</el-button
+          >
           <el-button size="medium" @click="doCopy">复制</el-button>
           <el-button size="medium" @click="doExport">导出</el-button>
         </div>
@@ -76,7 +78,12 @@
     <page-wrapper class="complexDetail-bottom">
       <!-- 详情页眉 开始 -->
       <template slot="header">
-        <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
+        <el-menu
+          :default-active="activeIndex"
+          class="el-menu-demo"
+          mode="horizontal"
+          @select="handleSelect"
+        >
           <el-menu-item index="1">订单信息</el-menu-item>
           <el-menu-item index="2">物流信息</el-menu-item>
           <el-menu-item index="3">操作日志</el-menu-item>
@@ -122,23 +129,20 @@
             商品信息
           </div>
           <div class="bottomForm-content">
-            <el-table :data="skuDataList" :stripe='false' style="width: 100%">
-              <el-table-column prop="appId" label="主图">
-              </el-table-column>
+            <el-table :data="skuDataList" :stripe="false" style="width: 100%">
+              <el-table-column prop="appId" label="主图"> </el-table-column>
               <el-table-column prop="consignee" label="商品编码">
               </el-table-column>
               <el-table-column prop="created" label="商品名称">
               </el-table-column>
-              <el-table-column prop="flowNo" label="规格">
-              </el-table-column>
+              <el-table-column prop="flowNo" label="规格"> </el-table-column>
               <el-table-column prop="memberInfo" label="数量">
               </el-table-column>
               <el-table-column prop="realAmount" label="单位">
               </el-table-column>
               <el-table-column prop="sysState" label="单价/¥">
               </el-table-column>
-              <el-table-column prop="type" label="小计">
-              </el-table-column>
+              <el-table-column prop="type" label="小计"> </el-table-column>
             </el-table>
           </div>
           <div class="bottomForm-footer">
@@ -169,7 +173,7 @@
   </div>
 </template>
 
-<script lang='ts' src='./ComplexDetail.ts'></script>
+<script lang="ts" src="./ComplexDetail.ts"></script>
 
 <style lang="scss" scoped>
 .complexDetail {
@@ -259,10 +263,10 @@
       margin-top: 12px;
       .bottomForm-footer-content {
         .amountList {
-          width:222px;
-          height:24px;
+          width: 222px;
+          height: 24px;
           font-size: 12px;
-          color: #36445A;
+          color: #36445a;
           .amountName {
             display: inline-block;
             width: 60px;
@@ -270,13 +274,13 @@
           }
           .amount {
             margin-left: 8px;
-            font-family:PingFangSC-Regular,PingFang SC;
+            font-family: PingFangSC-Regular, PingFang SC;
           }
         }
         .amountPayable {
           .amountPayable-number {
             font-size: 16px;
-            color: #DE3232;
+            color: #de3232;
           }
         }
       }

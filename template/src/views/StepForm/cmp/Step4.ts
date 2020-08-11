@@ -1,20 +1,20 @@
-import { Component, Vue } from 'vue-property-decorator'
+import { Component, Vue } from 'vue-property-decorator';
 
 @Component({
-    components: {}
+  components: {}
 })
 export default class Step4 extends Vue {
-    /**
-     * 再次创建
-     */
-    doCreate() {
-        console.log('再次创建');
-    }
+  /**
+   * 再次创建
+   */
+  doCreate() {
+    console.log('再次创建');
+  }
 
-    /**
-     * 查看详情
-     */
-    doDetail() {
-        console.log('查看详情');
-    }
+  /**
+   * 查看详情
+   */
+  doDetail() {
+    console.log('查看详情');
+  }
 }

@@ -1,9 +1,8 @@
-import { Vue, Component } from 'vue-property-decorator'
+import { Vue, Component } from 'vue-property-decorator';
 
 @Component({
-    components: {
-    }
+  components: {}
 })
 export default class DetailView extends Vue {
-    // @Prop({ type: String, default: '' }) title: string = ''
+  // @Prop({ type: String, default: '' }) title: string = ''
 }

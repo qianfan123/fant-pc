@@ -173,14 +173,7 @@
                 </detail-card> -->
         <detail-card title="图文详情">
           <template slot="right">
-            <editor
-              id="editor_id"
-              height="300px"
-              width="100%"
-              :content="editorText"
-              :loadStyleMode="false"
-              @on-content-change="onContentChange"
-            ></editor>
+            <editor></editor>
           </template>
         </detail-card>
       </detail-view>

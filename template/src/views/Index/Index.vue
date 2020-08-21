@@ -5,7 +5,7 @@
     <template slot="header">
       <div class="header-left">
         <img src="@/assets/logo.png" class="header-left-logo" />
-        <span>海鼎微信进件平台</span>
+        <span>Fant Admin</span>
       </div>
       <el-dropdown class="header-right" trigger="click" @command="doLogout">
         <div class="user-name">

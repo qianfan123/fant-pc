@@ -8,26 +8,26 @@ module.exports = (api, options, rootOptions) => {
             "url": "git+https://github.com/qianfan123/fant-cli"
         },
         "scripts": {
-            "build": "vue-cli-service build --mode development",
+            "build": "vue-cli-service build",
             "uat": "vue-cli-service build --mode uat",
             "production": "vue-cli-service build --mode production",
             "serve": "vue-cli-service serve"
-        },
-        "dependencies": {
+          },
+          "dependencies": {
             "@types/nprogress": "^0.2.0",
             "axios": "^0.19.2",
             "core-js": "^3.6.5",
-            "fant-ui": "1.0.2",
+            "fant-ui": "1.0.3",
             "nprogress": "^0.2.0",
             "vue": "^2.6.11",
             "vue-class-component": "^7.2.5",
-            "vue-kindeditor": "^0.4.5",
             "vue-property-decorator": "^8.5.1",
             "vue-router": "^3.3.4",
             "vuex": "^3.5.1",
-            "vuex-class": "^0.3.2"
-        },
-        "devDependencies": {
+            "vuex-class": "^0.3.2",
+            "wangeditor": "^3.1.1"
+          },
+          "devDependencies": {
             "@typescript-eslint/eslint-plugin": "^2.33.0",
             "@typescript-eslint/parser": "^2.33.0",
             "@vue/cli-plugin-babel": "^4.4.4",
@@ -45,11 +45,11 @@ module.exports = (api, options, rootOptions) => {
             "eslint-plugin-vue": "^6.2.2",
             "mockjs": "^1.1.0",
             "node-sass": "^4.12.0",
-            "sass-loader": "^8.0.2",
+            "sass-loader": "^9.0.3",
             "typescript": "^3.9.7",
             "vue-template-compiler": "^2.6.11",
             "webpack-bundle-analyzer": "^3.8.0"
-        },
+          },
         config: {},
         gitHooks: {}
     })

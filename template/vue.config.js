@@ -2,11 +2,12 @@ const CompressionWebpackPlugin = require('compression-webpack-plugin');
 
 module.exports = {
   publicPath: './',
-  lintOnSave: false,
+  lintOnSave: true,
   css: {
     loaderOptions: {
       sass: {
-        prependData: '@import "@/assets/styles/var.scss";'
+        // additionalData: '@import "~@/assets/styles/var.scss";'
+        additionalData: '@import "~@/assets/styles/var.scss";'
       }
     }
   },
@@ -23,11 +24,11 @@ module.exports = {
       );
     }
   },
-  chainWebpack: config => {
-    config
-      .plugin('webpack-bundle-analyzer')
-      .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin);
-  },
+  // chainWebpack: config => {
+  //   config
+  //     .plugin('webpack-bundle-analyzer')
+  //     .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin);
+  // },
 
   runtimeCompiler: true,
   productionSourceMap: false

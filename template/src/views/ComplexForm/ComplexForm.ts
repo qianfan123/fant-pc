@@ -3,9 +3,10 @@ import PageWrapper from '@/components/page-wrapper/PageWrapper.vue';
 import DetailView from '@/components/detail-view/DetailView.vue';
 import ListView from '@/components/list-view/ListView.vue';
 import DetailCard from '@/components/detail-card/DetailCard.vue';
+import Editor from '@/components/editor/editor.vue';
 
 @Component({
-  components: { PageWrapper, DetailView, DetailCard, ListView }
+  components: { PageWrapper, DetailView, DetailCard, ListView, Editor }
 })
 export default class ComplexForm extends Vue {
   imageUrl: string = ''; // 图片地址
@@ -131,13 +132,5 @@ export default class ComplexForm extends Vue {
       return false;
     }
     return typeIndex >= -1 && isLt1M;
-  }
-
-  /**
-   * 富文本框改变事件
-   * @param val 富文本框内容
-   */
-  onContentChange(val: string) {
-    this.editorText = val;
   }
 }

@@ -5,4 +5,4 @@ declare module '*.vue' {
 declare type Nullable<T> = T | null; // 空
 declare module 'fant-ui';
 declare module 'mockjs';
-declare module 'vue-kindeditor';
+declare module 'wangeditor';

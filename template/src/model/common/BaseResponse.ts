@@ -2,7 +2,7 @@ export default class BaseResponse<T> {
   // 响应码
   code: number = 0;
   // 结果信息
-  msg: string = '';
+  msg: string = "";
   // 响应数据
   data: T;
   // 总数

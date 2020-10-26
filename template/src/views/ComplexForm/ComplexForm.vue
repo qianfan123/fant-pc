@@ -16,19 +16,11 @@
         <!-- 不同type对应不同颜色，可以作为表单页面状态的容器 -->
         <detail-card title="基础信息">
           <template slot="right">
-            <el-form
-              :model="form"
-              :rules="rules"
-              :inline-message="true"
-              ref="basicForm"
-              label-width="120px"
-            >
+            <el-form :model="form" :rules="rules" :inline-message="true" ref="basicForm" label-width="120px">
               <el-row>
                 <el-col :span="12">
                   <el-form-item label="商品名称" prop="code">
-                    <span class="tip"
-                      >- 系统自动生成，可修改，最多不超过10个字符</span
-                    >
+                    <span class="tip">- 系统自动生成，可修改，最多不超过10个字符</span>
                     <el-input v-model="form.code"></el-input>
                   </el-form-item>
                 </el-col>
@@ -42,9 +34,7 @@
               <el-row>
                 <el-col :span="12">
                   <el-form-item label="商品编码" prop="code">
-                    <span class="tip"
-                      >- 系统自动生成，可修改，最多不超过10个字符</span
-                    >
+                    <span class="tip">- 系统自动生成，可修改，最多不超过10个字符</span>
                     <el-input v-model="form.code"></el-input>
                   </el-form-item>
                 </el-col>
@@ -120,12 +110,9 @@
               <el-row>
                 <el-col :span="12">
                   <el-form-item label="商品主图" prop="code">
-                    <span class="tip"
-                      >-
-                      图片上传建议：688*424像素，PNG/JPG格式，大小不超过1M</span
-                    >
+                    <span class="tip">- 图片上传建议：688*424像素，PNG/JPG格式，大小不超过1M</span>
                     <el-upload
-                      action="https://jsonplaceholder.typicode.com/posts/"
+                      action="http://otp.cdinfotech.top/"
                       list-type="picture-card"
                       class="example-uploader"
                       :on-success="handleImgSuccess"
@@ -138,10 +125,7 @@
                 </el-col>
                 <el-col :span="12">
                   <el-form-item label="商品视频" prop="code">
-                    <span class="tip"
-                      >- 视频比例建议1:1，支持
-                      wmv/mp4/rmvb/avi；支持30秒以内时长；大小不超过30M</span
-                    >
+                    <span class="tip">- 视频比例建议1:1，支持 wmv/mp4/rmvb/avi；支持30秒以内时长；大小不超过30M</span>
                     <el-upload
                       action="https://jsonplaceholder.typicode.com/posts/"
                       list-type="picture-card"

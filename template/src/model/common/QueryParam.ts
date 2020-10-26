@@ -1,5 +1,5 @@
-import FilterParam from '@/model/common/FilterParam';
-import SortParam from '@/model/common/SortParam';
+import FilterParam from "@/model/common/FilterParam";
+import SortParam from "@/model/common/SortParam";
 
 export default class QueryParam {
   // 开始位置

@@ -1,10 +1,10 @@
-import axios from 'axios';
-import store from '../store';
-import { CommonUtil } from 'fant-ui';
+import axios from "axios";
+import store from "../store";
+import { CommonUtil } from "fant-ui";
 
-const qs = require('qs');
+const qs = require("qs");
 axios.defaults.paramsSerializer = params => {
-  return qs.stringify(params, { arrayFormat: 'repeat' });
+  return qs.stringify(params, { arrayFormat: "repeat" });
 };
 axios.defaults.timeout = 60000;
 
@@ -59,7 +59,7 @@ export default class ApiClient {
           if (response.data.msg) {
             error.message = response.data.msg;
           } else {
-            error.message = response.status + '服务器内部异常';
+            error.message = response.status + "服务器内部异常";
           }
           (error as any).response = response.data;
           throw error;
@@ -69,26 +69,26 @@ export default class ApiClient {
         console.log(error);
 
         if (!error.response) {
-          error.message = '请检查网络设置';
+          error.message = "请检查网络设置";
           return Promise.reject(error);
         }
         switch (error.response.status) {
           case 101:
             break;
           case 401:
-            error.message = '登录已过期,请重新登录!';
+            error.message = "登录已过期,请重新登录!";
             break;
           case 403:
-            error.message = '禁止访问!';
+            error.message = "禁止访问!";
             break;
           case 503:
-            error.message = '服务器升级中!';
+            error.message = "服务器升级中!";
             break;
           case 500:
-            error.message = error.response.data.msg || '服务内部异常!';
+            error.message = error.response.data.msg || "服务内部异常!";
             break;
           default:
-            error.message = '未知错误';
+            error.message = "未知错误";
         }
         return Promise.reject(error);
       }

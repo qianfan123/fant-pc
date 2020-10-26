@@ -2,9 +2,7 @@
   <div class="finished">
     <i class="el-icon-check finished-icon"></i>
     <span class="finished-text">操作成功</span>
-    <span class="finished-describe"
-      >新建表单成功啦新建表单成功啦新建表单成功啦新建表单成功啦</span
-    >
+    <span class="finished-describe">新建表单成功啦新建表单成功啦新建表单成功啦新建表单成功啦</span>
     <div class="finished-operator">
       <el-button type="primary" @click="doCreate">再次新建</el-button>
       <el-button style="margin-left:16px" @click="doDetail">查看详情</el-button>

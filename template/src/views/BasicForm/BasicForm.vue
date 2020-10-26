@@ -22,13 +22,7 @@
         <!-- 不同type对应不同颜色，可以作为表单页面状态的容器 -->
         <detail-card title="基础信息" :showTag="true">
           <template slot="right">
-            <el-form
-              :model="form"
-              :rules="rules"
-              :inline-message="true"
-              ref="basicForm"
-              label-width="120px"
-            >
+            <el-form :model="form" :rules="rules" :inline-message="true" ref="basicForm" label-width="120px">
               <el-row>
                 <el-col :span="8">
                   <el-form-item label="门店代码" prop="code">

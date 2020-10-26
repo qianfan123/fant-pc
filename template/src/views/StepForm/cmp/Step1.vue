@@ -1,11 +1,5 @@
 <template>
-  <el-form
-    :model="form"
-    :rules="rules"
-    ref="step1"
-    label-width="120px"
-    class="example-form"
-  >
+  <el-form :model="form" :rules="rules" ref="step1" label-width="120px" class="example-form">
     <el-form-item label="商品ID" prop="name">
       <span class="tip">撒打瞌睡打款收到师傅的</span>
       <el-input ref="name" v-model="form.name"></el-input>
@@ -29,12 +23,7 @@
         </el-option>
       </el-select>
     </el-form-item>
-    <el-button
-      style="margin-top: 12px;margin-left:120px"
-      type="primary"
-      @click="doNext"
-      >下一步</el-button
-    >
+    <el-button style="margin-top: 12px;margin-left:120px" type="primary" @click="doNext">下一步</el-button>
   </el-form>
 </template>
 

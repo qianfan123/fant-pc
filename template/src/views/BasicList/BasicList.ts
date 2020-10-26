@@ -1,10 +1,10 @@
-import { Component, Vue } from 'vue-property-decorator';
-import BasicLayout from '@/layouts/BasicLayoutSingle/BasicLayout.vue';
-import PageWrapper from '@/components/page-wrapper/PageWrapper.vue';
-import QueryCondition from '@/components/query-condition/QueryCondition.vue';
-import ListView from '@/components/list-view/ListView.vue';
-import ExampleApi from '@/http/example/ExampleApi';
-import ListModel from '@/model/example/ListModel';
+import { Component, Vue } from "vue-property-decorator";
+import BasicLayout from "@/layouts/BasicLayoutSingle/BasicLayout.vue";
+import PageWrapper from "@/components/page-wrapper/PageWrapper.vue";
+import QueryCondition from "@/components/query-condition/QueryCondition.vue";
+import ListView from "@/components/list-view/ListView.vue";
+import ExampleApi from "@/http/example/ExampleApi";
+import ListModel from "@/model/example/ListModel";
 
 @Component({
   components: {
@@ -16,7 +16,7 @@ import ListModel from '@/model/example/ListModel';
 })
 export default class BasicList extends Vue {
   $refs: any;
-  applyDate: string = ''; // 申请日期
+  applyDate: string = ""; // 申请日期
   orderDataList: ListModel[] = []; // 订单列表
   orderTotal: number = 0; // 单据总数
 
@@ -48,17 +48,17 @@ export default class BasicList extends Vue {
    * 重置按钮事件
    */
   doReset() {
-    this.$alert('这是一段内容', '标题名称', {
-      type: 'danger',
-      confirmButtonText: '确定',
+    this.$alert("这是一段内容", "标题名称", {
+      type: "danger",
+      confirmButtonText: "确定",
       callback: action => {
         this.$message({
-          type: 'info',
+          type: "info",
           message: `action: ${action}`
         });
       }
     });
-    this.applyDate = '';
+    this.applyDate = "";
     this.$refs.orderDataList.reset();
   }
 
@@ -67,6 +67,6 @@ export default class BasicList extends Vue {
    * @param row
    */
   doOrderDtl(row: ListModel) {
-    this.$router.push('/basicDetail');
+    this.$router.push("/basicDetail");
   }
 }

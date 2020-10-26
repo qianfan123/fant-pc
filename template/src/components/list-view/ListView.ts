@@ -1,5 +1,5 @@
-import { Component, Vue, Prop, Watch } from 'vue-property-decorator';
-import { CommonUtil } from 'fant-ui';
+import { Component, Vue, Prop, Watch } from "vue-property-decorator";
+import { CommonUtil } from "fant-ui";
 // 筛选参数
 class FilterParam {
   // 查询条件运算,格式为“field:<操作符>”
@@ -51,6 +51,7 @@ export default class ListView extends Vue {
       return true;
     }
   })
+  @Prop({ type: Function })
   checkSelectable: () => boolean; // checkbox是否可选
 
   internalPage: number = 1;
@@ -63,7 +64,7 @@ export default class ListView extends Vue {
     if (this.defaultSort) {
       this.internalDefaultSort = {
         prop: this.defaultSort.property,
-        order: this.defaultSort.direction === 'ASC' ? 'ascending' : 'descending'
+        order: this.defaultSort.direction === "ASC" ? "ascending" : "descending"
       };
       this.queryParam.sorters = [this.defaultSort];
     }
@@ -73,20 +74,20 @@ export default class ListView extends Vue {
 
   doSelectionChange(arr: any) {
     this.internalSelected = arr;
-    this.$emit('selected', this.internalSelected);
+    this.$emit("selected", this.internalSelected);
   }
 
   /**
    * 表格排序
    */
   doSortChange({ column, prop, order }: any) {
-    order === 'ascending' ? (order = 'ASC') : (order = 'DESC');
-    let sorts = [];
+    order === "ascending" ? (order = "ASC") : (order = "DESC");
+    const sorts = [];
     column && prop && order && sorts.push({ property: prop, direction: order });
     this.internalPage = 1;
     this.queryParam.start = (this.internalPage - 1) * this.queryParam.limit!;
     this.queryParam.sorters = sorts;
-    this.$emit('load', CommonUtil.copy(this.queryParam));
+    this.$emit("load", CommonUtil.copy(this.queryParam));
   }
 
   /**
@@ -102,7 +103,7 @@ export default class ListView extends Vue {
   doPageChange(page: number) {
     this.internalPage = page;
     this.queryParam.start = (this.internalPage - 1) * this.queryParam.limit;
-    this.$emit('load', CommonUtil.copy(this.queryParam));
+    this.$emit("load", CommonUtil.copy(this.queryParam));
   }
 
   /**
@@ -115,13 +116,13 @@ export default class ListView extends Vue {
 
   search() {
     this.doCancel(); // 解决编辑已勾选数据后，internalSelected不改变的问题
-    this.$emit('load', CommonUtil.copy(this.queryParam));
+    this.$emit("load", CommonUtil.copy(this.queryParam));
   }
 
   reset() {
     this.doCancel(); // 解决编辑已勾选数据后，internalSelected不改变的问题
     this.internalPage = 1;
     this.queryParam.start = (this.internalPage - 1) * this.queryParam.limit;
-    this.$emit('load', CommonUtil.copy(this.queryParam));
+    this.$emit("load", CommonUtil.copy(this.queryParam));
   }
 }

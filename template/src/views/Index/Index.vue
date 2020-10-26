@@ -9,10 +9,7 @@
       </div>
       <el-dropdown class="header-right" trigger="click" @command="doLogout">
         <div class="user-name">
-          <img
-            src="@/assets/img/common/ic_portrait@2x.png"
-            class="user-name-icon"
-          />
+          <img src="@/assets/img/common/ic_portrait@2x.png" class="user-name-icon" />
           <span>小星星</span>
         </div>
         <el-dropdown-menu slot="dropdown">
@@ -43,11 +40,7 @@
               <i :class="item.icon"></i>
               <span>{{ item.name }}</span>
             </template>
-            <router-link
-              v-for="(submenu, key) in item.children"
-              :key="key"
-              :to="submenu.url"
-            >
+            <router-link v-for="(submenu, key) in item.children" :key="key" :to="submenu.url">
               <el-menu-item :index="submenu.index" ref="menuItem">
                 <span slot="title">{{ submenu.name }}</span>
               </el-menu-item>

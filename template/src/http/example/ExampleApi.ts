@@ -1,6 +1,6 @@
-import ApiClient from '@/http/ApiClient';
-import BaseResponse from '@/model/common/BaseResponse';
-import ListModel from '@/model/example/ListModel';
+import ApiClient from "@/http/ApiClient";
+import BaseResponse from "@/model/common/BaseResponse";
+import ListModel from "@/model/example/ListModel";
 
 export default class ExampleApi {
   /**
@@ -8,7 +8,7 @@ export default class ExampleApi {
    */
   static getList(applyDate: string): Promise<BaseResponse<ListModel[]>> {
     return ApiClient.server()
-      .post('/example/getList', { applyDate: applyDate }, {})
+      .post("/example/getList", { applyDate: applyDate }, {})
       .then(res => {
         return res.data;
       });
@@ -18,7 +18,7 @@ export default class ExampleApi {
    */
   static getSkuList(applyDate: string): Promise<BaseResponse<ListModel[]>> {
     return ApiClient.server()
-      .post('/example/getSkuList', { applyDate: applyDate }, {})
+      .post("/example/getSkuList", { applyDate: applyDate }, {})
       .then(res => {
         return res.data;
       });

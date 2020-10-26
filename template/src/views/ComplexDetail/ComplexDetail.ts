@@ -1,15 +1,15 @@
-import { Component, Vue } from 'vue-property-decorator';
-import PageWrapper from '@/components/page-wrapper/PageWrapper.vue';
-import ExampleApi from '@/http/example/ExampleApi';
-import ListModel from '@/model/example/ListModel';
+import { Component, Vue } from "vue-property-decorator";
+import PageWrapper from "@/components/page-wrapper/PageWrapper.vue";
+import ExampleApi from "@/http/example/ExampleApi";
+import ListModel from "@/model/example/ListModel";
 
 @Component({
   components: { PageWrapper }
 })
 export default class ComplexDetail extends Vue {
   skuDataList: ListModel[] = [];
-  activeIndex = '1';
-  applyDate = '';
+  activeIndex = "1";
+  applyDate = "";
 
   mounted() {
     ExampleApi.getList(this.applyDate)
@@ -23,18 +23,18 @@ export default class ComplexDetail extends Vue {
 
   // 切换菜单项
   handleSelect() {
-    console.log('change...');
+    console.log("change...");
   }
   // 审核
   doAudit() {
-    console.log('change...');
+    console.log("change...");
   }
   // 复制
   doCopy() {
-    console.log('change...');
+    console.log("change...");
   }
   // 导出
   doExport() {
-    console.log('change...');
+    console.log("change...");
   }
 }

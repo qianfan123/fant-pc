@@ -1,0 +1,154 @@
+@font-face {
+  font-family: "el-icon"; /* Project id 2075506 */
+  src: url('iconfont.woff2?t=1628501598785') format('woff2'),
+       url('iconfont.woff?t=1628501598785') format('woff'),
+       url('iconfont.ttf?t=1628501598785') format('truetype');
+}
+
+[class^="el-icon-"], [class*=" el-icon-"]{
+  font-family: "el-icon" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.el-icon-ic_delete:before {
+  content: "\e612";
+}
+
+.el-icon-ic_move_in:before {
+  content: "\e613";
+}
+
+.el-icon-ic_move_out:before {
+  content: "\e614";
+}
+
+.el-icon-arrow-up:before {
+  content: "\e89b";
+}
+
+.el-icon-arrow-down:before {
+  content: "\e89c";
+}
+
+.el-icon-edit:before {
+  content: "\e89a";
+}
+
+.el-icon-stretching:before {
+  content: "\e691";
+}
+
+.el-icon-loading-circle:before {
+  content: "\e898";
+}
+
+.el-icon-success:before {
+  content: "\e897";
+}
+
+.el-icon-circle-close:before {
+  content: "\e895";
+}
+
+.el-icon-circle-check:before {
+  content: "\e896";
+}
+
+.el-icon-caret-bottom:before {
+  content: "\e891";
+}
+
+.el-icon-carat-left:before {
+  content: "\e892";
+}
+
+.el-icon-d-arrow-left:before {
+  content: "\e88e";
+}
+
+.el-icon-d-arrow-right:before {
+  content: "\e88f";
+}
+
+.el-icon-arrow-left:before {
+  content: "\e88c";
+}
+
+.el-icon-arrow-right:before {
+  content: "\e88d";
+}
+
+.el-icon-close:before {
+  content: "\e88b";
+}
+
+.el-icon-check:before {
+  content: "\e88a";
+}
+
+.el-icon-star-on:before {
+  content: "\e888";
+}
+
+.el-icon-star-off:before {
+  content: "\e889";
+}
+
+.el-icon-d-caret:before {
+  content: "\e887";
+}
+
+.el-icon-delete:before {
+  content: "\e79a";
+}
+
+.el-icon-error:before {
+  content: "\e886";
+}
+
+.el-icon-document:before {
+  content: "\e885";
+}
+
+.el-icon-warning:before {
+  content: "\e884";
+}
+
+.el-icon-info:before {
+  content: "\e883";
+}
+
+.el-icon-date:before {
+  content: "\e79d";
+}
+
+.el-icon-view:before {
+  content: "\e881";
+}
+
+.el-icon-upload:before {
+  content: "\e680";
+}
+
+.el-icon-loading:before {
+  content: "\e689";
+}
+
+.el-icon-minus:before {
+  content: "\e68d";
+}
+
+.el-icon-plus:before {
+  content: "\e68e";
+}
+
+.el-icon-search:before {
+  content: "\e68f";
+}
+
+.el-icon-time:before {
+  content: "\e690";
+}
+

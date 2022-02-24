@@ -1,3 +1,12 @@
+<!--
+ * @Author: 徐庆凯
+ * @Date: 2021-04-22 10:14:05
+ * @LastEditTime: 2021-04-23 10:56:57
+ * @LastEditors: 徐庆凯
+ * @Description: 基础列表
+ * @FilePath: \fant-template\src\views\BasicList\BasicList.vue
+ * 记得注释
+-->
 <template>
   <page-wrapper>
     <!-- 列表页眉 开始 -->
@@ -28,7 +37,7 @@
     <template slot="query">
       <query-condition @search="doSearch" @reset="doReset">
         <template>
-          <el-col :span="8">
+          <el-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 8 }" :xl="{ span: 6 }">
             <el-date-picker
               type="date"
               ref="applyDate"
@@ -37,13 +46,31 @@
               placeholder="申请时间"
             ></el-date-picker>
           </el-col>
+          <el-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 8 }" :xl="{ span: 6 }">
+            <el-time-picker
+              style="width:200px"
+              v-model="applyDate"
+              :picker-options="{
+                selectableRange: '18:30:00 - 20:30:00'
+              }"
+              placeholder="任意时间点"
+            >
+            </el-time-picker>
+          </el-col>
         </template>
       </query-condition>
     </template>
     <!-- 列表查询条件 结束 -->
     <!-- 列表主体表格 开始 -->
     <template slot="body">
-      <list-view ref="orderDataList" :selectable="false" :data="orderDataList" :total="orderTotal" @load="doListLoad">
+      <list-view
+        ref="orderDataList"
+        :selectable="false"
+        :data="orderDataList"
+        :total="orderTotal"
+        @load="doListLoad"
+        v-loading="loading"
+      >
         <el-table-column prop="flowNo" label="订单号"> </el-table-column>
         <el-table-column prop="sysState" label="订单状态"> </el-table-column>
         <el-table-column prop="type" label="订单类型"> </el-table-column>

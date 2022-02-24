@@ -1,8 +1,17 @@
+<!--
+ * @Author: 徐庆凯
+ * @Date: 2021-02-19 16:33:37
+ * @LastEditTime: 2021-11-30 16:23:37
+ * @LastEditors: 徐庆凯
+ * @Description: 
+ * @FilePath: \fant-template\src\layouts\BasicLayoutSingle\BasicLayout.vue
+ * 记得注释
+-->
 <template>
   <div class="basic-layout">
     <div class="basic-layout-sider">
       <div class="logo">
-        <img class="logo-img" src="@/assets/logo.png" alt="logo" />
+        <img class="logo-img" src="@/assets/img/pic_logo.png" alt="logo" />
       </div>
       <slot name="sider"> </slot>
     </div>
@@ -26,6 +35,7 @@
   height: 100vh;
   overflow-x: hidden;
   .basic-layout-sider {
+    z-index: 1;
     scrollbar-width: none; /* firefox */
     -ms-overflow-style: none; /* IE 10+ */
     width: 200px;
@@ -35,10 +45,11 @@
     overflow-y: auto;
     .logo {
       display: flex;
-      justify-content: center;
       align-items: center;
       width: 200px;
       height: 60px;
+      padding: 26px;
+      box-sizing: border-box;
       .logo-img {
         width: 86px;
         height: auto;
@@ -74,7 +85,7 @@
       width: 100%;
       height: calc(100% - 64px);
       box-sizing: border-box;
-      padding: 20px;
+      // padding: 20px;
       background-color: #f0f2f6;
       overflow: auto;
     }

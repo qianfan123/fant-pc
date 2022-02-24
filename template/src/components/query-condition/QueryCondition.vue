@@ -5,7 +5,15 @@
       <template v-if="opened && $slots.closed">
         <slot name="closed"></slot>
       </template>
-      <el-col :span="8" v-if="showButton" class="condition-operation">
+      <el-col
+        :xs="{ span: 24 }"
+        :sm="{ span: 24 }"
+        :md="{ span: 12 }"
+        :lg="{ span: 8 }"
+        :xl="{ span: 6 }"
+        v-if="showButton"
+        class="condition-operation"
+      >
         <el-button size="medium" type="primary" @click="doSearch">查询</el-button>
         <el-button size="medium" @click="doReset">重置</el-button>
         <el-button size="medium" type="text" v-if="toggle && opened" @click="doToggle" icon="el-icon-arrow-up"

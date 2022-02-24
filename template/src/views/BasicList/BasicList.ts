@@ -1,3 +1,12 @@
+/*
+ * @Author: 徐庆凯
+ * @Date: 2021-04-14 19:18:05
+ * @LastEditTime: 2021-04-21 11:31:11
+ * @LastEditors: 徐庆凯
+ * @Description: 基础列表
+ * @FilePath: \fant-template\src\views\BasicList\BasicList.ts
+ * 记得注释
+ */
 import { Component, Vue } from "vue-property-decorator";
 import BasicLayout from "@/layouts/BasicLayoutSingle/BasicLayout.vue";
 import PageWrapper from "@/components/page-wrapper/PageWrapper.vue";
@@ -19,6 +28,7 @@ export default class BasicList extends Vue {
   applyDate: string = ""; // 申请日期
   orderDataList: ListModel[] = []; // 订单列表
   orderTotal: number = 0; // 单据总数
+  loading: boolean = true; // 数据是否正在加载
 
   mounted() {
     this.doSearch();
@@ -27,13 +37,15 @@ export default class BasicList extends Vue {
    * 搜索按钮点击事件
    */
   doSearch() {
+    this.loading = true;
     ExampleApi.getList(this.applyDate)
       .then(resp => {
+        this.loading = false;
         this.orderDataList = resp.data;
         this.orderTotal = resp.total;
       })
       .catch(error => {
-        console.log(error);
+        this.loading = false;
       });
   }
 
@@ -56,10 +68,10 @@ export default class BasicList extends Vue {
           type: "info",
           message: `action: ${action}`
         });
+        this.applyDate = "";
+        this.$refs.orderDataList.reset();
       }
     });
-    this.applyDate = "";
-    this.$refs.orderDataList.reset();
   }
 
   /**

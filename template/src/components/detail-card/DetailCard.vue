@@ -37,8 +37,9 @@
     height: 40px;
     font-size: 14px;
     line-height: 0;
-    font-family: PingFangSC-Medium, PingFang SC;
     font-weight: 500;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 600;
     color: $--color-text-primary;
     .header-tag {
       width: 3px;

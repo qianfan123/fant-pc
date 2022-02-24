@@ -39,7 +39,7 @@ export default class ListView extends Vue {
   @Prop({ type: Boolean, default: false }) stripe: boolean; // 是否斑马纹
   @Prop({ type: Number, default: 0 }) total: number; // 选项总数
   @Prop({ type: Array, default: [] }) data: any[];
-  @Prop() emptyText: string;
+  @Prop({ type: String, default: "" }) emptyText: string;
   @Prop() defaultSort: any; // 默认排序
   @Prop() rowKey: any; // 行id 配合reserve-selection使用
   @Prop({ type: Boolean, default: true }) reserveSelection: boolean; // 跨页选中

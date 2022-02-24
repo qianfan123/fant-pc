@@ -1,3 +1,12 @@
+<!--
+ * @Author: 徐庆凯
+ * @Date: 2021-02-19 16:33:37
+ * @LastEditTime: 2021-04-23 10:54:40
+ * @LastEditors: 徐庆凯
+ * @Description: 
+ * @FilePath: \fant-template\src\App.vue
+ * 记得注释
+-->
 <template>
   <div id="app">
     <router-view />
@@ -8,8 +17,10 @@
 html,
 body {
   width: 100%;
-  min-height: 100%;
-  min-width: 1024px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  // min-width: 1024px;
   overflow-x: auto;
   -webkit-font-smoothing: antialiased;
 }
@@ -28,6 +39,6 @@ body {
   color: #2c3e50;
   background: #f0f2f5;
   font-size: 14px;
-  min-height: 100vh;
+  height: 100%;
 }
 </style>

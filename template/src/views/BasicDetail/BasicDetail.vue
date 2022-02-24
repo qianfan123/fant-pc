@@ -7,8 +7,8 @@
       <!-- 页眉标题 结束 -->
       <!-- 页眉按钮组（按钮为一个时，可以不用div包裹） 开始 -->
       <div>
-        <el-button type="primary" size="medium" @click="doEdit">编辑</el-button>
-        <el-button type="primary" size="medium" @click="doBack">返回</el-button>
+        <el-button type="primary" size="large" @click="doEdit">编辑</el-button>
+        <el-button size="large" @click="doBack">返回</el-button>
       </div>
       <!-- 页眉按钮组 结束 -->
     </template>
@@ -19,27 +19,6 @@
       <detail-view>
         <!-- 详情卡片 参数有showTag,title,type 具体用法可参照本页面及组件内注释 -->
         <!-- 不同type对应不同颜色，可以作为编辑页面状态的容器 -->
-        <detail-card type="success">
-          <template slot="left">
-            啊书法大赛发
-          </template>
-          <template slot="right">
-            <el-form>
-              <el-row>
-                <el-col :span="8">
-                  <el-form-item label="下单客户：">
-                    撒旦萨达[ 撒倒萨倒萨十大]
-                  </el-form-item>
-                </el-col>
-                <el-col :span="8">
-                  <el-form-item label="收货人：">
-                    但是大师傅士大夫是大师傅士大夫是
-                  </el-form-item>
-                </el-col>
-              </el-row>
-            </el-form>
-          </template>
-        </detail-card>
 
         <detail-card title="基础信息" :showTag="true">
           <template slot="right">

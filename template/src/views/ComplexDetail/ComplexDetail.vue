@@ -9,9 +9,9 @@
         <!-- 页眉标题 结束 -->
         <!-- 页眉按钮组（按钮为一个时，可以不用div包裹） 开始 -->
         <div>
-          <el-button type="primary" size="medium" @click="doAudit">审核</el-button>
-          <el-button size="medium" @click="doCopy">复制</el-button>
-          <el-button size="medium" @click="doExport">导出</el-button>
+          <el-button type="primary" size="large" @click="doAudit">审核</el-button>
+          <el-button size="large" @click="doCopy">复制</el-button>
+          <el-button size="large" @click="doExport">导出</el-button>
         </div>
         <!-- 页眉按钮组 结束 -->
       </template>

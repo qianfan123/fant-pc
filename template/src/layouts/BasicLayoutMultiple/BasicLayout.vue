@@ -1,3 +1,12 @@
+<!--
+ * @Author: 徐庆凯
+ * @Date: 2021-02-19 16:33:37
+ * @LastEditTime: 2021-11-30 16:23:08
+ * @LastEditors: 徐庆凯
+ * @Description: 
+ * @FilePath: \fant-template\src\layouts\BasicLayoutMultiple\BasicLayout.vue
+ * 记得注释
+-->
 <template>
   <div class="basic-layout">
     <div class="basic-layout-header"></div>
@@ -13,7 +22,7 @@
         >
           <el-submenu index="1">
             <template slot="title">
-              <i class="el-icon-location"></i>
+              <i class="ic-ui-location"></i>
               <span>导航一</span>
             </template>
             <el-menu-item-group>
@@ -43,7 +52,7 @@
           </el-menu-item>
           <el-submenu index="5">
             <template slot="title">
-              <i class="el-icon-location"></i>
+              <i class="ic-ui-location"></i>
               <span>导航一</span>
             </template>
             <el-menu-item-group>
@@ -82,6 +91,7 @@
   &-body {
     flex: 1 1 auto;
     .basic-layout-sider {
+      z-index: 1;
       width: 200px;
       min-height: calc(100vh - 64px);
       background: $--color-text-primary;

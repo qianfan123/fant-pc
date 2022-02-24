@@ -1,20 +1,12 @@
 <template>
   <page-wrapper>
-    <!-- 表单页眉 开始 -->
-    <template slot="header">
-      <!-- 页面标题或自定义内容（若使用标题，则需用span包裹） -->
-      <span>复杂表单</span>
-      <!-- 页眉标题 结束 -->
-    </template>
-    <!-- 表单页眉 结束 -->
-
     <!-- 表单主体 开始 -->
     <template slot="body">
       <!-- 详情视图 开始（可以作为详情与表单的容器） -->
       <detail-view>
         <!-- 表单卡片 参数有showTag,title,type 具体用法可参照本页面及组件内注释 -->
         <!-- 不同type对应不同颜色，可以作为表单页面状态的容器 -->
-        <detail-card title="基础信息">
+        <detail-card title="基础信息" :show-tag="true">
           <template slot="right">
             <el-form :model="form" :rules="rules" :inline-message="true" ref="basicForm" label-width="120px">
               <el-row>
@@ -142,19 +134,6 @@
             </el-form>
           </template>
         </detail-card>
-        <!-- <detail-card title="商品规格">
-                    <template slot="right">
-                        <el-row>
-                            <el-col :span="12">
-                                <el-select v-model="form.type" ref="type" multiple filterable allow-create default-first-option value-key="uuid" placeholder="请下拉选择或输入查询">
-                                    <el-option v-for="item in optionList" :key="item.uuid" :value="`${item.name}[${item.mobile}]`" :label="`${item.name}[${item.mobile}]`">
-                                        {{ item.name }}[{{ item.mobile }}]
-                                    </el-option>
-                                </el-select>
-                            </el-col>
-                        </el-row>
-                    </template>
-                </detail-card> -->
         <detail-card title="图文详情">
           <template slot="right">
             <editor></editor>
@@ -164,6 +143,15 @@
       <!-- 详情视图 结束 -->
     </template>
     <!-- 表单主体 结束 -->
+    <!-- 表单页脚 开始 -->
+    <template slot="footer">
+      <div>
+        <el-button type="primary" size="large">提交</el-button>
+        <el-button size="large" @click="doBack">返回</el-button>
+      </div>
+      <!-- 页脚标题 结束 -->
+    </template>
+    <!-- 表单页脚 结束 -->
   </page-wrapper>
 </template>
 

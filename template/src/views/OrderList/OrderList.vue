@@ -56,7 +56,7 @@
       <template slot="query">
         <query-condition :toggle="true" @search="doSearch" @reset="doReset">
           <template>
-            <el-col :span="6">
+            <el-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 8 }" :xl="{ span: 6 }">
               <el-form-item label="订单号">
                 <el-date-picker
                   type="date"
@@ -67,7 +67,7 @@
                 ></el-date-picker>
               </el-form-item>
             </el-col>
-            <el-col :span="6">
+            <el-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 8 }" :xl="{ span: 6 }">
               <el-form-item label="订单号">
                 <el-date-picker
                   type="date"
@@ -78,7 +78,7 @@
                 ></el-date-picker>
               </el-form-item>
             </el-col>
-            <el-col :span="6">
+            <el-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 8 }" :xl="{ span: 6 }">
               <el-form-item label="订单号">
                 <el-date-picker
                   type="date"
@@ -91,7 +91,7 @@
             </el-col>
           </template>
           <template slot="closed">
-            <el-col :span="6">
+            <el-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 8 }" :xl="{ span: 6 }">
               <el-form-item label="订单号">
                 <el-date-picker
                   type="date"
@@ -102,7 +102,7 @@
                 ></el-date-picker>
               </el-form-item>
             </el-col>
-            <el-col :span="6">
+            <el-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 8 }" :xl="{ span: 6 }">
               <el-form-item label="订单号">
                 <el-date-picker
                   type="date"
@@ -113,7 +113,7 @@
                 ></el-date-picker>
               </el-form-item>
             </el-col>
-            <el-col :span="6">
+            <el-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 8 }" :xl="{ span: 6 }">
               <el-form-item label="订单号">
                 <el-date-picker
                   type="date"
@@ -124,7 +124,7 @@
                 ></el-date-picker>
               </el-form-item>
             </el-col>
-            <el-col :span="6">
+            <el-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 8 }" :xl="{ span: 6 }">
               <el-form-item label="订单号">
                 <el-date-picker
                   type="date"
